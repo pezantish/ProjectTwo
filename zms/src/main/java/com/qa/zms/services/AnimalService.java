@@ -3,6 +3,7 @@ package com.qa.zms.services;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import com.qa.zms.domain.Animal;
 import com.qa.zms.exceptions.AnimalNotFoundException;
@@ -27,9 +28,9 @@ public class AnimalService {
 		return this.repo.findAll();
 	}
 	
-	public List<Animal> readByNameAndSpecies(String name, String species) {
-		return this.repo.findByNameAndSpeciesSQL(name, species);
-	}
+//	public List<Animal> readByNameAndSpecies(String name, String species) {
+//		return this.repo.findByNameAndSpeciesSQL(name, species);
+//	}
 
 	// Post Requests
 	public Animal create(Animal animal) {
@@ -39,7 +40,7 @@ public class AnimalService {
 	// Put Requests
 	public Animal replace(long id, Animal animal) {
 		Animal replacedAnimal = readById(id);
-		replacedAnimal.setAll(animal.getName(), animal.getSpecies(), animal.getEnvironment());
+		replacedAnimal.setAll(animal.getName(), animal.getSpecies(), animal.getAge(), animal.getEnclosureId());
 		return this.repo.saveAndFlush(replacedAnimal);
 	}
 

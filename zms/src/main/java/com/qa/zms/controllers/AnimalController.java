@@ -42,10 +42,10 @@ public class AnimalController {
 		return new ResponseEntity<List<Animal>>(service.readAll(), HttpStatus.OK);
 	}
 	
-	@GetMapping("/readByNameAndSpecies")
-	public ResponseEntity<List<Animal>> readByNameAndSpecies(String name, String species) {
-		return new ResponseEntity<List<Animal>>(service.readByNameAndSpecies(name, species), HttpStatus.OK);
-	}
+//	@GetMapping("/readByNameAndSpecies")
+//	public ResponseEntity<List<Animal>> readByNameAndSpecies(String name, String species) {
+//		return new ResponseEntity<List<Animal>>(service.readByNameAndSpecies(name, species), HttpStatus.OK);
+//	}
 
 	// Post Request
 	@PostMapping("/create")
