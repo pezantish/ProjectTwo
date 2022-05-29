@@ -1,0 +1,1 @@
+INSERT INTO animal (name, species, environment) VALUES ('George', 'Gorilla', 'rainforest');
