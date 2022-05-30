@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=S, initial-scale=1.0">
+    <title>ZMS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href="zmx.css" rel="stylesheet">
+</head>
+<body>
+    <div id="NavBar">
+        <ul id="NavList">
+            <li class="NavItem"><a class="NavLink" id="Home" href="./index.html">Chessire Zoo</a></li>
+            <li class="NavItem"><a class="NavLink" href="about.html">About</a></li>
+            <li class="NavItem"><a class="NavLink" href="map.html">Map</a></li>
+            <li class="NavItem"><a class="NavLink" href="quiz.html">Quiz</a></li>
+            <!-- w3 method -->
+            <li class="NavItem">
+                <div class="DDDiv">
+                    <a class="DDLink" href="#">Enclosures
+                        <!-- With bootstrap font awesome, adds a down arrow -->
+                        <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="DDDown">
+                        <li class="DDItemWrapper"><a class="DDItem" href="#">Primates</a></li>
+                        <li class="DDItemWrapper"><a class="DDItem" href="#">Big Cats</a></li>
+                        <li class="DDItemWrapper"><a class="DDItem" href="#">Empty</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="NavItem"><a class="NavLink" href="contact.html">Contact Us</a></li>
+            <li class="NavItem"><a class="NavLink" href="zms.html">ZMS</a></li>
+            <!--  -->
+        </ul>
+    </div>
+    <div id="master">
+        <form id="searchForm">
+            <input type="text" id="searchBar" name="searchBar">
+            <input id="searchBut" type="button" value="Search by ID">
+            <input id="GetAll" type="button" value="Refresh">
+        </form>
+        <div id="contents">
+            <table id="allTable">
+            </table>
+        </div>
+        <div id="popupUpdate">
+            <form id="formUpdate">
+                <h1>Edit Entry</h1>
+                <label>Editing ID: </label>
+                <label id="idInput"></label></br>
+                <label for="nameInput">Name: </label></br>
+                <input type="text" id="nameInput" name="nameInput"></br>
+                <label for="speciesInput">Species: </label></br>
+                <input type="text" id="speciesInput" name="speciesInput"></br>
+                <label for="ageInput">Age: </label></br>
+                <input type="text" id="ageInput" name="ageInput"></br>
+                <label for="enclosureInput">Enclosure: </label></br>
+                <input type="text" id="enclosureInput" name="enclosureInput" maxlength="3" minlength="3"></br>
+                <input id="update" type="button" value="Update">
+            </form>
+        </div>
+        <div id="popupCreate">
+            <form id="formCreate">
+                <h1>Create</h1>
+                <label>Adding new entry: </label></br>
+                <label for="nameInput">Name: </label></br>
+                <input type="text" id="nameInput" name="nameInput"></br>
+                <label for="speciesInput">Species: </label></br>
+                <input type="text" id="speciesInput" name="speciesInput"></br>
+                <label for="ageInput">Age: </label></br>
+                <input type="text" id="ageInput" name="ageInput"></br>
+                <label for="enclosureInput">Enclosure: </label></br>
+                <input type="text" id="enclosureInput" name="enclosureInput" maxlength="3" minlength="3"></br>
+                <input id="create" type="button" value="Create">
+            </form>
+        </div>
+        <button id="addNew">Add New</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="./zms.js"></script>
+</body>
+
+</html>
