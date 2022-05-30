@@ -35,7 +35,36 @@
             <!--  -->
         </ul>
     </div>
-    <div id="master">
+    <img src="https://images.unsplash.com/photo-1534567153574-2b12153a87f0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8em9vfGVufDB8fDB8fA%3D%3D&w=1000&q=80">
+    <div id="popupCreate">
+        <form id="formCreate">
+            <h4>Adding New Entry: </h4></br>
+            <label for="nameInput">Name: </label></br>
+            <input type="text" id="nameInput" name="nameInput"></br></br>
+            <label for="speciesInput">Species: </label></br>
+            <input type="text" id="speciesInput" name="speciesInput"></br></br>
+            <label for="ageInput">Age: </label></br>
+            <input type="text" id="ageInput" name="ageInput"></br></br>
+            <label for="enclosureInput">Enclosure: </label></br>
+            <input type="text" id="enclosureInput" name="enclosureInput" maxlength="3" minlength="3"></br></br>
+            <input id="create" type="button" value="Create">
+        </form>
+    </div>
+    <div id="popupUpdate">
+        <form id="formUpdate">
+            <h4 class="heading" id="idInput"></h4></br>
+            <label for="nameInput">Name: </label></br>
+            <input type="text" id="nameInput" name="nameInput"></br></br>
+            <label for="speciesInput">Species: </label></br>
+            <input type="text" id="speciesInput" name="speciesInput"></br></br>
+            <label for="ageInput">Age: </label></br>
+            <input type="text" id="ageInput" name="ageInput"></br></br>
+            <label for="enclosureInput">Enclosure: </label></br>
+            <input type="text" id="enclosureInput" name="enclosureInput" maxlength="3" minlength="3"></br></br>
+            <input id="update" type="button" value="Update">
+        </form>
+    </div>
+    <div id="mainContent">
         <form id="searchForm">
             <input type="text" id="searchBar" name="searchBar">
             <input id="searchBut" type="button" value="Search by ID">
@@ -44,37 +73,6 @@
         <div id="contents">
             <table id="allTable">
             </table>
-        </div>
-        <div id="popupUpdate">
-            <form id="formUpdate">
-                <h1>Edit Entry</h1>
-                <label>Editing ID: </label>
-                <label id="idInput"></label></br>
-                <label for="nameInput">Name: </label></br>
-                <input type="text" id="nameInput" name="nameInput"></br>
-                <label for="speciesInput">Species: </label></br>
-                <input type="text" id="speciesInput" name="speciesInput"></br>
-                <label for="ageInput">Age: </label></br>
-                <input type="text" id="ageInput" name="ageInput"></br>
-                <label for="enclosureInput">Enclosure: </label></br>
-                <input type="text" id="enclosureInput" name="enclosureInput" maxlength="3" minlength="3"></br>
-                <input id="update" type="button" value="Update">
-            </form>
-        </div>
-        <div id="popupCreate">
-            <form id="formCreate">
-                <h1>Create</h1>
-                <label>Adding new entry: </label></br>
-                <label for="nameInput">Name: </label></br>
-                <input type="text" id="nameInput" name="nameInput"></br>
-                <label for="speciesInput">Species: </label></br>
-                <input type="text" id="speciesInput" name="speciesInput"></br>
-                <label for="ageInput">Age: </label></br>
-                <input type="text" id="ageInput" name="ageInput"></br>
-                <label for="enclosureInput">Enclosure: </label></br>
-                <input type="text" id="enclosureInput" name="enclosureInput" maxlength="3" minlength="3"></br>
-                <input id="create" type="button" value="Create">
-            </form>
         </div>
         <button id="addNew">Add New</button>
     </div>

@@ -1,6 +1,6 @@
 'use strict'
 
-let masterDiv = document.querySelector("#master");
+let masterDiv = document.querySelector("#mainContent");
 let contentsDiv = document.querySelector("#contents");
 let table = document.querySelector("#allTable");
 let popupUpdate = document.querySelector("#popupUpdate");
@@ -90,7 +90,7 @@ let deleteID = (idVal) => {
 
 let openEdit = (idVal) => {
     let idLabel = document.getElementById("idInput");
-    idLabel.innerHTML = idVal;
+    idLabel.innerHTML = `Editing ID: ${idVal}`;
     popupUpdate.style.display = "block";
     popupCreate.style.display = "none";
 }
@@ -114,7 +114,6 @@ let submitUpdate = () => {
     axios.put(str, newVal)
         .then((response) => {
             getAll();
-            popupUpdate.style.display = "none";
             input.reset();
         })
         .catch((err) => {
@@ -135,7 +134,6 @@ let submitCreate = () => {
     axios.post(str, newVal)
         .then((response) => {
             getAll();
-            popupCreate.style.display = "none";
             input.reset();
         })
         .catch((err) => {
@@ -150,5 +148,3 @@ getAllBtn.addEventListener("click", getAll);
 addNewBtn.addEventListener("click", openCreate);
 submitUpdateBtn.addEventListener("click", submitUpdate);
 submitCreateBtn.addEventListener("click", submitCreate);
-// FOR H2:
-// INSERT INTO "animal" ("name", "species", "age", "enclosure_id") VALUES('George', 'Gorilla', 7, 'LBX'), ('Mary', 'Gorilla', 8, 'LBX'); 
