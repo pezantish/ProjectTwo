@@ -1,0 +1,10 @@
+DROP TABLE IF EXISTS animal CASCADE;
+
+CREATE TABLE animal(
+	id INT NOT NULL AUTO_INCREMENT,
+    name VARCHAR(20) NOT NULL,
+    species VARCHAR(25) NOT NULL,
+    age INT NOT NULL,
+    enclosure_id VARCHAR(3) NOT NULL,
+    PRIMARY KEY(`id`)
+);
