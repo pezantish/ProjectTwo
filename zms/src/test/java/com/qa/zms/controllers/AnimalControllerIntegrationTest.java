@@ -64,10 +64,10 @@ public class AnimalControllerIntegrationTest {
 	
 	@Test
 	public void readByIdTest() throws Exception {
-		Animal output = new Animal("George", "Gorilla", 7, "LBX");
+		Animal output = new Animal(1L, "George", "Gorilla", 7, "LBX");
 		String outputToJSON = mapper.writeValueAsString(output);
 
-		mvc.perform(post("/animal/readById/1")
+		mvc.perform(get("/animal/readById/1")
 				.contentType(MediaType.APPLICATION_JSON))
 				.andExpect(status().isOk())
 				.andExpect(content().json(outputToJSON));
