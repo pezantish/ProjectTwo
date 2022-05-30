@@ -100,15 +100,3 @@ a.DDItem:hover {
     color:#ffffff;
 }
 
-table, th, td{
-    border: 1px solid;
-    border-collapse: collapse;
-    
-}
-
-th, td{
-    padding-top: 1vh;
-    padding-bottom: 1vh;
-    padding-left: 1vw;
-    padding-right: 1vw;
-}
