@@ -11,5 +11,4 @@ public class ZmsApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(ZmsApplication.class, args);
 	}
-
 }
