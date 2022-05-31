@@ -7,6 +7,8 @@ let popupUpdate = document.querySelector("#popupUpdate");
 let popupCreate = document.querySelector("#popupCreate");
 let searchForm = document.querySelector("#searchForm");
 let searchBar = document.querySelector("#searchBar");
+let formUpdate = document.getElementById("formUpdate");
+let formCreate = document.getElementById("formCreate");
 
 // Buttons
 let getAllBtn = document.querySelector("#GetAll");
@@ -18,6 +20,13 @@ let searchBtn = document.querySelector("#searchBut");
 
 let getByID = () => {
     let id = searchForm.elements[0].value;
+    let typeReg = /^[0-9]+$/;
+        if (!id.match(typeReg)) {
+            searchForm.elements[0].style.borderColor = "red";
+            alert(`Make sure your inputs match the required format: 
+            \n- Search by ID: Number`);
+    } else {
+        searchForm.elements[0].style.borderColor = "rgb(220, 99, 0)";
     axios.get(`http://localhost:8080/animal/readById/${id}`)
         .then((response) => {
             table.innerHTML = "<tr><th>ID</th><th>Name</th><th>Age</th><th>Species</th><th>Enclosure</th><th></th></tr>";
@@ -27,11 +36,13 @@ let getByID = () => {
         })
         .catch((err) => {
             console.error(err);
+            alert(`An error has occured. It might be that your ID does not exist!`)
         });
+    }
 }
 
 let getAll = () => {
-    console.log("HELLO")
+    console.log("Getting all results");
     axios.get("http://localhost:8080/animal/readAll")
         .then((response) => {
             table.innerHTML = "<tr><th>ID</th><th>Name</th><th>Age</th><th>Species</th><th>Enclosure</th><th></th></tr>";
@@ -54,11 +65,11 @@ let view = (entry) => {
     let editBtn = document.createElement("Button");
     editBtn.innerHTML = "Edit";
     editBtn.addEventListener("click", function () { openEdit(entry.id); });
-    editBtn.id = `Edit${entry.id}`;
+    editBtn.classList.add("buttons")
     let deleteBtn = document.createElement("Button");
     deleteBtn.innerHTML = "Delete";
     deleteBtn.addEventListener("click", function () { deleteID(entry.id); });
-    deleteBtn.id = `Delete${entry.id}`;
+    deleteBtn.classList.add("buttons")
     cellID.innerHTML = `${entry.id}`;
     cellName.innerHTML = `${entry.name}`;
     cellSpecies.innerHTML = `${entry.species}`;
@@ -90,7 +101,7 @@ let deleteID = (idVal) => {
 
 let openEdit = (idVal) => {
     let idLabel = document.getElementById("idInput");
-    idLabel.innerHTML = `Editing ID: ${idVal}`;
+    idLabel.innerHTML = idVal;
     popupUpdate.style.display = "block";
     popupCreate.style.display = "none";
 }
@@ -101,45 +112,80 @@ let openCreate = () => {
 }
 
 let submitUpdate = () => {
-    let input = document.getElementById("formUpdate");
+    console.log("Update pressed");
+    formCreate.reset();
     let idLabel = document.getElementById("idInput");
     let activeID = idLabel.innerHTML;
-    let newVal = {
-        "name": input.elements[0].value,
-        "age": input.elements[2].value,
-        "species": input.elements[1].value,
-        "enclosureId": input.elements[3].value
+    let typeList = [/^[a-z]+$/i, /^[0-9]+$/, /^[a-z]+$/i, /^[a-z]{3}$/i];
+    let valid = true;
+    for (let i = 0; i < formUpdate.elements.length - 1; i++) {
+        if (!formUpdate.elements[i].value.match(typeList[i])) {
+            formUpdate.elements[i].style.borderColor = "red";
+            valid = false;
+        } else {
+            formCreate.elements[i].style.borderColor = "rgb(220, 99, 0)";
+        }
     }
-    let str = `http://localhost:8080/animal/replace/${activeID}`;
-    axios.put(str, newVal)
-        .then((response) => {
-            getAll();
-            input.reset();
-        })
-        .catch((err) => {
-            console.error(err);
-        });
-
+    if (!valid) {
+        alert(`Make sure your inputs match the required format: 
+        \n- Name: String
+        \n- Age: Number
+        \n- Species: String
+        \n- Enclosure: String of Length 3`);
+    } else {
+        let newVal = {
+            "name": formUpdate.elements[0].value,
+            "age": formUpdate.elements[1].value,
+            "species": formUpdate.elements[2].value,
+            "enclosureId": formUpdate.elements[3].value
+        }
+        let str = `http://localhost:8080/animal/replace/${activeID}`;
+        axios.put(str, newVal)
+            .then((response) => {
+                getAll();
+                formUpdate.reset();
+            })
+            .catch((err) => {
+                console.error(err);
+            });
+    }
 }
 
 let submitCreate = () => {
-    let input = document.getElementById("formCreate");
-    let newVal = {
-        "name": input.elements[0].value,
-        "age": input.elements[2].value,
-        "species": input.elements[1].value,
-        "enclosureId": input.elements[3].value
+    formUpdate.reset();
+    let typeList = [/^[a-z]+$/i, /^[0-9]+$/, /^[a-z]+$/i, /^[a-z]{3}$/i];
+    let valid = true;
+    for (let i = 0; i < formCreate.elements.length - 1; i++) {
+        if (!formCreate.elements[i].value.match(typeList[i])) {
+            formCreate.elements[i].style.borderColor = "red";
+            valid = false;
+        } else {
+            formCreate.elements[i].style.borderColor = "rgb(220, 99, 0)";
+        }
     }
-    let str = `http://localhost:8080/animal/create`;
-    axios.post(str, newVal)
-        .then((response) => {
-            getAll();
-            input.reset();
-        })
-        .catch((err) => {
-            console.error(err);
-        });
-
+    if (!valid) {
+        alert(`Make sure your inputs match the required format: 
+        \n- Name: String
+        \n- Age: Number
+        \n- Species: String
+        \n- Enclosure: String of Length 3`);
+    } else {
+        let newVal = {
+            "name": formCreate.elements[0].value,
+            "age": formCreate.elements[1].value,
+            "species": formCreate.elements[2].value,
+            "enclosureId": formCreate.elements[3].value.toUpperCase()
+        }
+        let str = `http://localhost:8080/animal/create`;
+        axios.post(str, newVal)
+            .then((response) => {
+                getAll();
+                formCreate.reset();
+            })
+            .catch((err) => {
+                console.error(err);
+            });
+    }
 }
 
 getAll();

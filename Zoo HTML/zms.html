@@ -6,13 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=S, initial-scale=1.0">
     <title>ZMS</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link href="zmx.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="zmx.css" rel="stylesheet">
 </head>
+
 <body>
-    <div id="NavBar">
+    <img id="backgroundImg" src="https://images.unsplash.com/photo-1534567153574-2b12153a87f0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8em9vfGVufDB8fDB8fA%3D%3D&w=1000&q=80">
+    <img id = "texture" src="navbar2.png">
+    <nav id="NavBar">
         <ul id="NavList">
-            <li class="NavItem"><a class="NavLink" id="Home" href="./index.html">Chessire Zoo</a></li>
+            <li class="NavItem"><a href="./index.html"><img class="NavLink" id="Home" href="./index.html" src="./logo.png"></a></li>
             <li class="NavItem"><a class="NavLink" href="about.html">About</a></li>
             <li class="NavItem"><a class="NavLink" href="map.html">Map</a></li>
             <li class="NavItem"><a class="NavLink" href="quiz.html">Quiz</a></li>
@@ -20,7 +25,6 @@
             <li class="NavItem">
                 <div class="DDDiv">
                     <a class="DDLink" href="#">Enclosures
-                        <!-- With bootstrap font awesome, adds a down arrow -->
                         <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="DDDown">
@@ -32,52 +36,58 @@
             </li>
             <li class="NavItem"><a class="NavLink" href="contact.html">Contact Us</a></li>
             <li class="NavItem"><a class="NavLink" href="zms.html">ZMS</a></li>
-            <!--  -->
         </ul>
-    </div>
-    <img src="https://images.unsplash.com/photo-1534567153574-2b12153a87f0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8em9vfGVufDB8fDB8fA%3D%3D&w=1000&q=80">
-    <div id="popupCreate">
-        <form id="formCreate">
-            <h4>Adding New Entry: </h4></br>
-            <label for="nameInput">Name: </label></br>
-            <input type="text" id="nameInput" name="nameInput"></br></br>
-            <label for="speciesInput">Species: </label></br>
-            <input type="text" id="speciesInput" name="speciesInput"></br></br>
-            <label for="ageInput">Age: </label></br>
-            <input type="text" id="ageInput" name="ageInput"></br></br>
-            <label for="enclosureInput">Enclosure: </label></br>
-            <input type="text" id="enclosureInput" name="enclosureInput" maxlength="3" minlength="3"></br></br>
-            <input id="create" type="button" value="Create">
-        </form>
-    </div>
-    <div id="popupUpdate">
-        <form id="formUpdate">
-            <h4 class="heading" id="idInput"></h4></br>
-            <label for="nameInput">Name: </label></br>
-            <input type="text" id="nameInput" name="nameInput"></br></br>
-            <label for="speciesInput">Species: </label></br>
-            <input type="text" id="speciesInput" name="speciesInput"></br></br>
-            <label for="ageInput">Age: </label></br>
-            <input type="text" id="ageInput" name="ageInput"></br></br>
-            <label for="enclosureInput">Enclosure: </label></br>
-            <input type="text" id="enclosureInput" name="enclosureInput" maxlength="3" minlength="3"></br></br>
-            <input id="update" type="button" value="Update">
-        </form>
-    </div>
-    <div id="mainContent">
-        <form id="searchForm">
-            <input type="text" id="searchBar" name="searchBar">
-            <input id="searchBut" type="button" value="Search by ID">
-            <input id="GetAll" type="button" value="Refresh">
-        </form>
-        <div id="contents">
-            <table id="allTable">
-            </table>
+    </nav>
+    <div id="mainBody">
+        <div id="popupCreate">
+            <form id="formCreate">
+                <label class="heading">New Entry:</label></br></br>
+                <label for="nameInput">Name: </label></br>
+                <input type="text" id="nameInput" name="nameInput"></br></br>
+                <label for="ageInput">Age: </label></br>
+                <input type="number" id="ageInput" name="ageInput"></br></br>
+                <label for="speciesInput">Species: </label></br>
+                <input type="text" id="speciesInput" name="speciesInput"></br></br>
+                <label for="enclosureInput">Enclosure: </label></br>
+                <input type="text" id="enclosureInput" name="enclosureInput" maxlength="3" minlength="3"></br></br>
+                <input id="create" class="buttons" type="button" value="Create">
+            </form>
         </div>
-        <button id="addNew">Add New</button>
+        <div id="popupUpdate">
+            <form id="formUpdate">
+                <label class="heading">Edit ID:</label>
+                <label class="heading" id="idInput"></label></br></br>
+                <label for="nameInput">Name: </label></br>
+                <input type="text" id="nameInput" name="nameInput"></br></br>
+                <label for="ageInput">Age: </label></br>
+                <input type="number" id="ageInput" name="ageInput"></br></br>
+                <label for="speciesInput">Species: </label></br>
+                <input type="text" id="speciesInput" name="speciesInput"></br></br>
+                <label for="enclosureInput">Enclosure: </label></br>
+                <input type="text" id="enclosureInput" name="enclosureInput" maxlength="3" minlength="3"></br></br>
+                <input class="buttons" id="update" type="button" value="Update">
+            </form>
+        </div>
+        <div id="mainContent">
+            <form id="searchForm">
+                <input type="text" id="searchBar" name="searchBar">
+                <input id="searchBut" class="buttons" type="button" value="Search by ID">
+                <input id="GetAll" class="buttons" type="button" value="Refresh">
+            </form>
+            <div id="contents">
+                <table id="allTable">
+                </table>
+            </div>
+            <button id="addNew" class="buttons">Add New</button>
+        </div>
     </div>
+    <footer id="footer">
+        <p class="footerText">This zoo does not exist. No animals were harmed in the making of this website. Well, except for one hamster named Susanne, but she knows what she did.</p><p id="credit" class="footerText"> Made by Elias Sadek.</p>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
     <script src="./zms.js"></script>
 </body>
 
