@@ -52,4 +52,5 @@ This project is licensed under the MIT license.
 ## Acknowledgments
 - Thanks to Anoush Lowton, for explaining how to do all this stuff, and helping me when I inevitably failed.
 - Thanks to my cohort for helping me out and giving me ideas. I'd list names, but then someone would get jealous.
-- Thanks to Rowan, not for helping me out, but for doing the Zebra voice. Then again, he asked, so, thank me? - Thanks to my Mum, for telling me I'm handsome. I certainly feel handsome now, at least. 
+- Thanks to Rowan, not for helping me out, but for doing the Zebra voice. Then again, he asked, so, thank me?  
+- Thanks to my Mum, for telling me I'm handsome. I certainly feel handsome now, at least. 
