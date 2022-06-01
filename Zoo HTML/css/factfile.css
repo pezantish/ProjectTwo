@@ -1,0 +1,56 @@
+#factfile{
+    position: absolute;
+    margin: 10vh 10vw;
+    margin-top: 4vh;
+    width: 80vw;
+    height: 80vh;
+    background-color: rgb(255, 138, 21);
+    border-radius: 1vmax;
+    border:  1vmin rgb(172, 94, 0);
+    border-style:dotted ;
+    padding: 4vh 4vw;
+}
+
+#ffImage{
+    margin: 2vh 4vw;
+    border: solid 1vmin rgb(172, 94, 0);
+    height: 65vh;
+    max-width: 25vw;
+    min-width: 22vw;
+}
+
+#voice{
+    position: absolute;
+    top: 2vh;
+    width: 10vw;
+}
+
+#ffTitle{
+    display: block;
+    position: absolute;
+    width: 25vw;
+    margin: -10vh -3vw;
+    font-family:'Ink Free',  sans-serif;
+    color: rgba(110, 55, 0, 0.765);
+    transform: rotate(-90deg);
+    font-size: 8vh;
+    height: 25vh;
+    top: 35vh;
+    left: -1vw;
+    font-weight: bold;
+    
+}
+
+#ffText{
+    font-family:'Ink Free',  sans-serif;
+    font-size: 2.5vh;
+    color: rgb(0, 0, 0);
+    padding: 2vh 2vw;
+    position: inherit;
+    width: 40vw;
+    height: 65vh;
+    top: 6vh;
+    right: 3vw;
+    border: groove 1vmin rgb(172, 94, 0);
+    overflow: scroll;
+}

@@ -1,0 +1,24 @@
+#footer{
+    position: absolute;
+    width: 100%;
+    height: 5%;
+    bottom: 0px;
+    padding: 0vh 1vw;
+    background-color: #007792;
+}
+
+.footerText{
+    position: relative;
+    display: inline;
+    font-size: 0.9vmax;
+    color: white;
+    text-align: left;
+}
+
+#credit{
+    position: relative;
+    display: inline-block;
+    font-size: 1.1vmax;
+    padding: 1vh 0vw;
+    padding-left: 25vw;
+}

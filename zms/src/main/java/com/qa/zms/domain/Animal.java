@@ -6,10 +6,14 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Animal {
 	
 	@Id 
@@ -28,21 +32,7 @@ public class Animal {
 	@Column(nullable = false) 
 	private String enclosureId; 
 	
-
-	// Default constructor - Spring uses this
-	public Animal() {}
-	
-	
-	
 	public Animal(String name, String species, long age, String enclosureId) {
-		this.name = name;
-		this.species = species;
-		this.age = age;
-		this.enclosureId = enclosureId;
-	}
-
-	public Animal(long id, String name, String species, long age, String enclosureId) {
-		this.id = id;
 		this.name = name;
 		this.species = species;
 		this.age = age;
