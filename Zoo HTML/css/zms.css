@@ -1,0 +1,140 @@
+body{
+    background-color: #2A7C35;
+    overflow: hidden;   
+}
+
+input[type=text], input[type=number]{
+    width: 14vw;
+    height: 4vh;
+    border: 0.2vmax inset;
+    border-color: #dc6300;
+}
+
+.heading{
+    font-size: 4vh;
+    color: #ffffff;
+    text-shadow: 0px 2px rgba(255, 255, 255, 0.322);
+}
+
+table{
+    width: 37vw;
+}
+
+table, th, td{
+    border-bottom: 2px solid rgba(0, 0, 0, 0.087);
+    border-collapse: collapse;
+    text-align: center;
+}
+
+tr{
+    background-color: #00000011;
+}
+
+th{
+    background-color: rgba(0, 0, 0, 0.281);
+    color: rgb(255, 255, 255);
+}
+
+tr:hover{
+    background-color: rgb(255, 122, 27);
+}
+
+th, td{
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+
+label{
+    font-size: 3vh;
+    color: #ffffff;
+}
+
+#formUpdate, #formCreate{
+    position: fixed;
+    width:17vw;
+    background-color: rgb(220, 99, 0);
+    text-align: center;
+    height: 80vh;
+    padding: 2vw 1vw;
+    border: ridge 0.5vh rgb(134, 60, 0);
+
+}
+
+#popupUpdate{
+    display: none;
+}
+
+#popupUpdate, #popupCreate{
+    position: relative;
+    /* top: 14vh; */
+    /* left: 25%; */
+
+    width: 17vw;
+    text-align: center;
+}
+
+.buttons{
+    width: auto;
+    border-radius: 15px;
+    box-shadow:0 1px 2px #00000085;
+    background-color: rgb(255, 255, 255);
+    border: rgb(255, 177, 93) 2px solid;
+    color: rgb(152, 74, 1);
+    font-weight: 10px;
+    text-align: center;
+    margin: 5px 2px;
+    padding: 5px 10px;
+
+}
+
+#contents{
+    overflow: scroll;
+    position: relative;
+    margin-top: 5vh;
+    width: 37vw;
+    height: 53vh;
+    overflow-y: scroll;
+    overflow-x: scroll;
+}
+
+#searchForm{
+    position: relative;
+    width: fit-content;
+    left: 4vw;
+}
+
+#addNew{
+    position: relative;
+    width:auto;
+    margin-top: 2vh;
+    padding-left: 4vw;
+    padding-right: 4vw;
+    margin-left: 9vw;
+}
+
+#mainBody{
+    position: fixed;
+    width: 80vw;
+    height: 100vh;
+    /* padding: 3vh 20vw; */
+    padding: 3vh 10vw;
+    margin: 0vh 10vw;
+    background-color: #45a7a247;
+    
+    
+}
+
+#mainContent{
+    position: absolute;
+    left: 30vw;
+    padding-top: 3vmin;
+    padding-left: 3vmin;
+    padding-right: 3vmin;
+    padding-bottom: 3vmin;
+    width: 40vw;
+    height: 80vh;
+    background-color: rgb(255, 138, 21);
+    border: ridge 0.5vh rgb(189, 85, 0);
+}
