@@ -1,6 +1,6 @@
 Coverage: 80.8%
 Jira
-#ZMS
+# ZMS
 
 ZMS is an Inventory Management System, which allows staff members to manage animals within a zoo. Editors will be able to add new animals into the system, or update, delete and view existing entries. The client has assured me that password protection is not necessary, but if I have time I shall add that in. I have also created a somewhat basic website, with informational pages.
 ##Getting Started
@@ -12,7 +12,7 @@ Edit: This will open up the update form if not already open; it will take the pl
 Add New: This will open up the create form if not already open; it will take the place of the Edit Id form.
 Create: This will create a new entry, containing values from the input boxes above.
 Update: This will update an existing entry, containing values from the input boxes above.
-##Prerequisites
+## Prerequisites
 - SpringBoot, with dependencies:
 ++ spring-boot-starter-data-jpa
 ++ spring-boot-starter-validation
@@ -31,25 +31,25 @@ Update: This will update an existing entry, containing values from the input box
 - JavaScript
 
 - MySQL
-##Installing
+## Installing
 Install the program from github, taking care to ensure file structure. Using the .jar file, run the backend. The html pages can be opened using any internet browser.
 
-##Testing
+## Testing
 Unit testing was completed using Mockito, Mvc and JUnit.
 Mockito is used when doing unit tests. Unit tests check each unit, independant of any other units it would normally interact with. Mockito is used to simulate interacting with other units, without accidentally testing other units concurrently.
 Mvc is used for the controller unit and integration testing, and checks that web-requests return the expected result.
 JUnit is used for service testing. It tests that the results are what was expected, within the program only. It is similar to mvc, but not web based
 
-##Versioning
+## Versioning
 I have used GitHub, linked below, for version control.
 
-##Authors
+## Authors
 Elias Sadek, Not A Real Zoo Owner: Github.
 
-##License
+## License
 This project is licensed under the MIT license.
 
-##Acknowledgments
+## Acknowledgments
 - Thanks to Anoush Lowton, for explaining how to do all this stuff, and helping me when I inevitably failed.
 - Thanks to my cohort for helping me out and giving me ideas. I'd list names, but then someone would get jealous.
 - Thanks to Rowan, not for helping me out, but for doing the Zebra voice. Then again, he asked, so, thank me? - Thanks to my Mum, for telling me I'm handsome. I certainly feel handsome now, at least. 
