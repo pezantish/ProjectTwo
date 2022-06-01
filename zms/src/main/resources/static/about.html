@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="../css/navbar.css" rel="stylesheet">
+    <link href="../css/about.css" rel="stylesheet">
+    <link href="../css/footer.css" rel="stylesheet">
+</head>
+
+<body>
+    <img id="backgroundImg" src="https://images.unsplash.com/photo-1534567153574-2b12153a87f0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8em9vfGVufDB8fDB8fA%3D%3D&w=1000&q=80">
+    <div id="textureWrapper">
+        <img id="texture" src="../resources/navbar2.png">
+    </div>
+    <nav id="NavBar">
+        <ul id="NavList">
+            <li class="NavItem"><a href="./index.html"><img class="NavLink" id="Home" href="./index.html"
+                        src="../resources/logo.png"></a></li>
+            <li class="NavItem"><a class="NavLink" href="./about.html">About</a></li>
+            <li class="NavItem"><a class="NavLink" href="./map.html">Map</a></li>
+            <li class="NavItem"><a class="NavLink" href="./quiz.html">Quiz</a></li>
+            <!-- w3 method -->
+            <li class="NavItem">
+                <div class="DDDiv">
+                    <a class="DDLink" href="./animals.html">Animals
+                        <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="DDDown">
+                        <li class="DDItemWrapper"><a class="DDItem" href="./gorilla.html">Gorilla</a></li>
+                        <li class="DDItemWrapper"><a class="DDItem" href="./giraffe.html">Giraffe</a></li>
+                        <li class="DDItemWrapper"><a class="DDItem" href="./zebra.html">Zebra</a></li>
+                        <li class="DDItemWrapper"><a class="DDItem" href="./koalagator.html">Koalagator</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="NavItem"><a class="NavLink" href="./contact.html">Contact Us</a></li>
+            <li class="NavItem"><a class="NavLink" href="./zms.html">ZMS</a></li>
+        </ul>
+    </nav>
+    <div id="readme">
+        <p>Coverage: 80.8%</p>
+        <a href="https://pezantish.atlassian.net/jira/software/projects/P2/boards/1">Jira</a>
+        <h1 class="heading"> ZMS</h1>
+        <p>ZMS is an Inventory Management System, which allows staff members to manage animals within a zoo.
+            Editors will be able to add new animals into the system, or update, delete and view existing entries.
+            The client has assured me that password protection is not necessary, but if I have time I shall add that in.
+            I have also created a somewhat basic website, with informational pages. </p>
+        <h3 class="heading">Getting Started</h3>
+        Through the webpage navbar, navigate to the ZMS page. 
+        Buttons and Functionality:</br>
+        Refresh: This will refresh the table, showing all entries currently in the database.</br>
+        Search by ID: This will refresh the table, showing only the entry with ID specified in the search bar.</br>
+        Delete: This will delete the item from the database.</br>
+        Edit: This will open up the update form if not already open; it will take the place of the New Entry form.</br>
+        Add New: This will open up the create form if not already open; it will take the place of the Edit Id form.</br>
+        Create: This will create a new entry, containing values from the input boxes above.</br>
+        Update: This will update an existing entry, containing values from the input boxes above.</br>
+
+
+        <h3 class="heading">Prerequisites</h3>
+        - SpringBoot, with dependencies:</br>
+        ++ spring-boot-starter-data-jpa</br>
+        ++ spring-boot-starter-validation</br>
+        ++ spring-boot-starter-web</br>
+        ++ spring-boot-devtools</br>
+        ++ h2</br>
+        ++ mysql-connector-java</br>
+        ++ spring-boot-starter-test</br></br>
+        - Maven</br></br>
+        - Java JDK</br></br>
+        - Lombok </br></br>
+        - JavaScript </br></br>
+        - MySQL
+        
+        <h3 class="heading">Installing</h3>
+        Install the program from github, taking care to ensure file structure.
+        Using the .jar file, run the backend. The html pages can be opened using any internet browser.</br></br>
+        <h3 class="heading">Testing</h3>
+        Unit testing was completed using Mockito, Mvc and JUnit.</br>
+        Mockito is used when doing unit tests. Unit tests check each unit, independant of any other units it 
+        would normally interact with. Mockito is used to simulate interacting with other units, without accidentally
+        testing other units concurrently. </br>
+        Mvc is used for the controller unit and integration testing, and checks that web-requests return the expected result.</br>
+        JUnit is used for service testing. It tests that the results are what was expected, within the program only. It is similar to mvc,
+    but not web based</br></br>
+        <h3 class="heading">Versioning</h3>
+        I have used GitHub, linked below, for version control.</br></br>
+        <h3 class="heading">Authors</h3>
+        Elias Sadek, Not A Real Zoo Owner: 
+            <a href="https://github.com/pezantish">Github.</a></br></br>
+        <h3 class="heading">License</h3>
+        This project is licensed under the MIT license.</br></br>
+        <h3 class="heading">Acknowledgments</h3>
+        - Thanks to Anoush Lowton, for explaining how to do all this stuff, and helping me when I inevitably failed.</br>
+        - Thanks to my cohort for helping me out and giving me ideas. I'd list names, but then someone would get jealous.</br>
+        - Thanks to Rowan, not for helping me out, but for doing the Zebra voice. Then again, he asked, so, thank me?
+        - Thanks to my Mum, for telling me I'm handsome. I certainly feel handsome now, at least.
+    </div>
+</body>
+
+</html>
