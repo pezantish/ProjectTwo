@@ -1,5 +1,5 @@
-Coverage: 80.8%
-Jira
+Coverage: 85.2%
+Jira: https://pezantish.atlassian.net/jira/software/projects/P2/boards/1
 # ZMS
 
 ZMS is an Inventory Management System, which allows staff members to manage animals within a zoo. Editors will be able to add new animals into the system, or update, delete and view existing entries. The client has assured me that password protection is not necessary, but if I have time I shall add that in. I have also created a somewhat basic website, with informational pages.
@@ -54,3 +54,4 @@ This project is licensed under the MIT license.
 - Thanks to my cohort for helping me out and giving me ideas. I'd list names, but then someone would get jealous.
 - Thanks to Rowan, not for helping me out, but for doing the Zebra voice. Then again, he asked, so, thank me?  
 - Thanks to my Mum, for telling me I'm handsome. I certainly feel handsome now, at least. 
+

@@ -1,0 +1,42 @@
+#cuDiv{
+    position: absolute;
+    margin: 30vh 30vw;
+    margin-top: 20vh;
+    width: 40vw;
+    height: 40vh;
+    background-color: rgb(255, 138, 21);
+    border-radius: 1vmax;
+    border:  1vmin rgb(172, 94, 0);
+    border-style:dotted ;
+    padding: 4vh 4vw;
+    text-align: center;
+}
+
+#cuTitle{
+    position: relative;
+    font-family:'Ink Free',  sans-serif;
+    color: rgba(110, 55, 0, 0.765);
+    font-size: 8vh;
+    font-weight: bold;
+    
+}
+
+#cuText{
+    font-family:'Ink Free',  sans-serif;
+    font-size: 2.5vh;
+    color: black;
+    position: inherit;
+    padding: 3vh 2vw;
+    width: 30vw;
+    height: 20vh;
+    border: groove 1vmin rgb(172, 94, 0);
+    background-color: rgba(255, 255, 255, 0.071);
+}
+
+a{
+    color: red;
+    text-decoration: dashed underline;
+}
+a:hover{
+    color: brown;
+}
