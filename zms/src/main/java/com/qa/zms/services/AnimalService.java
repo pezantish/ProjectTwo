@@ -45,12 +45,12 @@ public class AnimalService {
 	}
 
 
-	// Patch Requests
-	public Animal update(String name, long id) {
-		Animal replacedAnimal = readById(id);
-		replacedAnimal.setName(name);
-		return this.repo.saveAndFlush(replacedAnimal);
-	}
+//	// Patch Requests
+//	public Animal update(String name, long id) {
+//		Animal replacedAnimal = readById(id);
+//		replacedAnimal.setName(name);
+//		return this.repo.saveAndFlush(replacedAnimal);
+//	}
 
 	// Delete Requests
 	public boolean delete(long id) {

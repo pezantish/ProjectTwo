@@ -59,17 +59,16 @@ public class AnimalController {
 		return new ResponseEntity<Animal>(service.replace(id, animal), HttpStatus.ACCEPTED);
 	}
 
-	// Patch Request
-	@PatchMapping("/update/{id}")
-	public ResponseEntity<Animal> update(@PathParam("name") String name, @PathVariable long id) {
-		return new ResponseEntity<Animal>(service.update(name, id), HttpStatus.ACCEPTED);
-	}
+//	// Patch Request
+//	@PatchMapping("/update/{id}")
+//	public ResponseEntity<Animal> update(@PathParam("name") String name, @PathVariable long id) {
+//		return new ResponseEntity<Animal>(service.update(name, id), HttpStatus.ACCEPTED);
+//	}
 
 	// Delete Request
 	@DeleteMapping("/delete/{id}")
 	public ResponseEntity<Boolean> delete(@PathVariable long id) {
 		return service.delete(id) ? new ResponseEntity<>(HttpStatus.NO_CONTENT):
 			new ResponseEntity<>(HttpStatus.NOT_FOUND);
-		
 	}
 }
