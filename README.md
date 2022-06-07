@@ -1,6 +1,8 @@
 Coverage: 84.2%  
 [Jira](https://pezantish.atlassian.net/jira/software/projects/P2/boards/1)  
 [Presentation Recorded](https://drive.google.com/file/d/13TaJj7Jh7g2r3GxZIcouiGv9unEqwTiR/view?usp=sharing)
+
+#### Note: Minor edits have meant that the about page in the website may not be up to date. 
 # ZMS
 
 ZMS is an Inventory Management System, which allows staff members to manage animals within a zoo. Editors will be able to add new animals into the system, or update, delete and view existing entries. The client has assured me that password protection is not necessary, but if I have time I shall add that in. I have also created a somewhat basic website, with informational pages.
@@ -33,7 +35,7 @@ Update: This will update an existing entry, containing values from the input box
 
 - MySQL
 ## Installing
-Install the program from github, taking care to ensure file structure. Using the .jar file, run the backend. The html pages can be opened using any internet browser.
+Install the .jar from github. Using the .jar file, run the backend. The html pages can be opened using any internet browser by following this [link](http://localhost:8080/zms.html).
 
 ## Testing
 Unit testing was completed using Mockito, Mvc and JUnit.
@@ -53,6 +55,5 @@ This project is licensed under the MIT license.
 ## Acknowledgments
 - Thanks to Anoush Lowton, for explaining how to do all this stuff, and helping me when I inevitably failed.
 - Thanks to my cohort for helping me out and giving me ideas. I'd list names, but then someone would get jealous.
-- Thanks to Rowan, not for helping me out, but for doing the Zebra voice. Then again, he asked, so, thank me?  
 - Thanks to my Mum, for telling me I'm handsome. I certainly feel handsome now, at least. 
 
