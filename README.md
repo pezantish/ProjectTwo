@@ -1,5 +1,6 @@
-Coverage: 85.2%
-Jira: https://pezantish.atlassian.net/jira/software/projects/P2/boards/1
+Coverage: 85.2%  
+[Jira](https://pezantish.atlassian.net/jira/software/projects/P2/boards/1)  
+[Presentation Recorded](https://drive.google.com/file/d/13TaJj7Jh7g2r3GxZIcouiGv9unEqwTiR/view?usp=sharing)
 # ZMS
 
 ZMS is an Inventory Management System, which allows staff members to manage animals within a zoo. Editors will be able to add new animals into the system, or update, delete and view existing entries. The client has assured me that password protection is not necessary, but if I have time I shall add that in. I have also created a somewhat basic website, with informational pages.
@@ -44,7 +45,7 @@ JUnit is used for service testing. It tests that the results are what was expect
 I have used GitHub, linked below, for version control.
 
 ## Authors
-Elias Sadek, Not A Real Zoo Owner: Github.
+Elias Sadek, Not A Real Zoo Owner: [Github](https://github.com/pezantish).
 
 ## License
 This project is licensed under the MIT license.
