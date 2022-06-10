@@ -1,0 +1,102 @@
+#NavList{
+    list-style-type: none;  /*removes visible bullet points*/
+}
+
+body{
+    background-color:#ffffff;
+    overflow: scroll;
+}
+
+#NavBar{
+    position: fixed;
+    width: 100%;
+    height: 9vh;
+    background-color: #00D0FF;
+}
+
+#Home{
+    font-style: italic;
+    font-weight: bold;
+    font-family: 'Ink Free',  sans-serif;
+    font-size: 4vh;
+}
+
+
+
+.DDDown{
+    margin: 0;
+    padding: 0;
+    padding-bottom: 2vh;
+    position: relative;
+    display: none;
+    background-color: white;
+    list-style: none;
+    text-align: center;
+}
+
+.DDItemWrapper{
+    position: relative;
+    
+}
+
+.DDItem{
+    position: relative;
+    background-color: white;
+    color: black;
+    height: 100%;
+    text-decoration: none;
+    font-size: 3vh;
+}
+
+.DDList{
+    margin: 0;
+    margin-left: 1vw;
+    padding: 0;
+    padding-bottom: 2vh;
+    position: relative;
+    list-style: none;
+    text-align: center;
+}
+
+.NavItem{
+    position: relative;
+    float:left;  /*makes list horizontal*/
+}
+
+.NavLink, .DDLink, #home {
+    position: relative;
+    height: 9vh;
+    display: block;
+    padding-right:1.5vw;
+    padding-left:1.5vw;
+    padding-top:2vh;
+    padding-bottom:2vh;
+    font-family: 'Ink Free',  sans-serif;
+    font-size: 4vh;
+    text-align: center; /*Alignment within block*/
+    color :white;
+    text-decoration: none; /**/
+}
+
+.DDDiv:hover  .DDDown{
+    display: block;
+}
+
+a.DDItem:hover {
+    background-color: #ff4940eb;
+    color: aqua;
+    text-decoration: underline;
+}
+
+/* .DDList:hover{
+    background-color: #ff4940eb;
+} */
+
+.NavLink:hover, .DDLink:hover{
+    background-color: #5ee1ff;
+    border-color: #479aff;
+    border-style: none none solid none;
+    border-width: 2px;
+    color:#ffffff;
+}
+

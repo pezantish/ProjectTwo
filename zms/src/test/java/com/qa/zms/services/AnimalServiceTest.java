@@ -55,14 +55,14 @@ public class AnimalServiceTest {
 		Mockito.verify(repo, Mockito.times(1)).findById(1L);
 	}
 	
-	@Test
-	@Disabled
-	public void updateTest() {
-		Animal output = new Animal(1L, "George", "Gorilla", 7, "LBX");
-		Mockito.when(repo.findById(1L)).thenReturn(Optional.of(output));
-		assertEquals(output, service.readById(1L));
-		Mockito.verify(repo, Mockito.times(1)).findById(1L);
-	}
+//	@Test
+//	@Disabled
+//	public void updateTest() {
+//		Animal output = new Animal(1L, "George", "Gorilla", 7, "LBX");
+//		Mockito.when(repo.findById(1L)).thenReturn(Optional.of(output));
+//		assertEquals(output, service.readById(1L));
+//		Mockito.verify(repo, Mockito.times(1)).findById(1L);
+//	}
 	
 	@Test
 	public void replaceTest() {
