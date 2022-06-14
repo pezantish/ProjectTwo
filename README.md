@@ -61,4 +61,4 @@ This project is licensed under the MIT license.
 
 ## Notes for future
 - Git management was not were it should have been; a variety of issues on dev and main branch resulted in "emergency" patches to main, which should be avoided.  
-- 
+- Jira linking to git has been performed post project. This means no commits have been smart commited, but I know how to do this.
