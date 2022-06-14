@@ -4,7 +4,7 @@ Coverage: 84.2%
 
 #### Note: Minor edits have meant that the about page in the website may not be up to date. 
 #### Partial update functionality, i.e. updating with blank spaces doesn't effect existing entries, was done before we were offered the post-ims time. I've been assured submitting this in main is okay.
-#### Issues occured with post project push. 
+#### Issues occured with post project push. Hopefully this does not cause errors in this project now, but if it does, dev branch is a more realistic concept of what I did have originally (some hard resets were made on main post-ims marking) 
 
 # ZMS
 
