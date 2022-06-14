@@ -185,7 +185,6 @@ let submitCreate = () => {
             formCreate.elements[i].style.borderColor = "rgb(220, 99, 0)";
         }
     }
-    console.log(newVal);
     if (!valid) {
         alert(`Make sure your inputs match the required format: 
         \n- Name: String
