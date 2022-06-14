@@ -5,9 +5,6 @@ Coverage: 84.2%
 #### Note: Minor edits have meant that the about page in the website may not be up to date. 
 #### Partial update functionality, i.e. updating with blank spaces doesn't effect existing entries, was done before we were offered the post-ims time. I've been assured submitting this in main is okay.
 
-Coverage: 85.2%
-Jira: https://pezantish.atlassian.net/jira/software/projects/P2/boards/1
-
 # ZMS
 
 ZMS is an Inventory Management System, which allows staff members to manage animals within a zoo. Editors will be able to add new animals into the system, or update, delete and view existing entries. The client has assured me that password protection is not necessary, but if I have time I shall add that in. I have also created a somewhat basic website, with informational pages.
@@ -60,7 +57,6 @@ I have used GitHub, linked below, for version control.
 ## Authors
 Elias Sadek, Not A Real Zoo Owner: [Github](https://github.com/pezantish).
 
-
 ## License
 This project is licensed under the MIT license.
 
@@ -72,3 +68,8 @@ This project is licensed under the MIT license.
 ## Notes for future
 - Git management was not were it should have been; a variety of issues on dev and main branch resulted in "emergency" patches to main, which should be avoided. Commits were often too large, and due to attempting to commit a too-large file in one instance, a lot of errors occurred. The latter has hopefuilly been fixed with some hard resets.
 - Jira linking to git has been performed post project. This means no commits have been smart commited, but I know how to do this.
+=======
+Coverage: 84.2%  
+[Jira](https://pezantish.atlassian.net/jira/software/projects/P2/boards/1)  
+
+
