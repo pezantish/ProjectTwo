@@ -21,6 +21,25 @@ let searchBtn = document.querySelector("#searchBut");
 let getByID = () => {
     let id = searchForm.elements[0].value;
     let typeReg = /^[0-9]+$/;
+<<<<<<< HEAD
+    if (!id.match(typeReg)) {
+        searchForm.elements[0].style.borderColor = "red";
+        alert(`Make sure your inputs match the required format: 
+            \n- Search by ID: Number`);
+    } else {
+        searchForm.elements[0].style.borderColor = "rgb(220, 99, 0)";
+        axios.get(`http://localhost:8080/animal/readById/${id}`)
+            .then((response) => {
+                table.innerHTML = "<tr><th>ID</th><th>Name</th><th>Age</th><th>Species</th><th>Enclosure</th><th></th></tr>";
+                console.log("BOO");
+                let entry = response.data;
+                view(entry);
+            })
+            .catch((err) => {
+                console.error(err);
+                alert(`An error has occured. It might be that your ID does not exist!`)
+            });
+=======
         if (!id.match(typeReg)) {
             searchForm.elements[0].style.borderColor = "red";
             alert(`Make sure your inputs match the required format: 
@@ -38,6 +57,7 @@ let getByID = () => {
             console.error(err);
             alert(`An error has occured. It might be that your ID does not exist!`)
         });
+>>>>>>> main
     }
 }
 
@@ -114,12 +134,20 @@ let openCreate = () => {
 let submitUpdate = () => {
     console.log("Update pressed");
     formCreate.reset();
+<<<<<<< HEAD
+    let newVal = {};
+=======
+>>>>>>> main
     let idLabel = document.getElementById("idInput");
     let activeID = idLabel.innerHTML;
     let typeList = [/^[a-z]+$/i, /^[0-9]+$/, /^[a-z]+$/i, /^[a-z]{3}$/i];
     let valid = true;
     for (let i = 0; i < formUpdate.elements.length - 1; i++) {
+<<<<<<< HEAD
+        if (formUpdate.elements[i].value && !formUpdate.elements[i].value.match(typeList[i])) {
+=======
         if (!formUpdate.elements[i].value.match(typeList[i])) {
+>>>>>>> main
             formUpdate.elements[i].style.borderColor = "red";
             valid = false;
         } else {
@@ -133,6 +161,44 @@ let submitUpdate = () => {
         \n- Species: String
         \n- Enclosure: String of Length 3`);
     } else {
+<<<<<<< HEAD
+        axios.get(`http://localhost:8080/animal/readById/${activeID}`)
+            .then((response) => {
+                table.innerHTML = "<tr><th>ID</th><th>Name</th><th>Age</th><th>Species</th><th>Enclosure</th><th></th></tr>";
+                let vals = response.data;
+                newVal["name"] = vals.name;
+                newVal["age"] = vals.age;
+                newVal["species"] = vals.species;
+                newVal["enclosureId"] = vals.enclosureId;
+                let name = formUpdate.elements[0].value;
+                let age = formUpdate.elements[1].value;
+                let species = formUpdate.elements[2].value;
+                let enclosureId = formUpdate.elements[3].value;
+                console.log(`ONE ${newVal["enclosureId"]}`);
+                if (name) newVal["name"] = name;
+                if (age) newVal["age"] = age;
+                if (species) newVal["species"] = species;
+                if (enclosureId) newVal["enclosureId"] = enclosureId;
+                console.log(`TWO ${newVal["enclosureId"]}`);
+                console.log(`THREE ${newVal}`);
+                console.log(`FOUR ${newVal["name"]}`);
+                let str = `http://localhost:8080/animal/replace/${activeID}`;
+                axios.put(str, newVal)
+                    .then((response) => {
+                        getAll();
+                        formUpdate.reset();
+                    })
+                    .catch((err) => {
+                        console.error(err);
+                    });
+
+            })
+            .catch((err) => {
+                console.error(err);
+                alert(`An error has occured. It might be that your ID does not exist!`)
+            });
+
+=======
         let newVal = {
             "name": formUpdate.elements[0].value,
             "age": formUpdate.elements[1].value,
@@ -148,6 +214,7 @@ let submitUpdate = () => {
             .catch((err) => {
                 console.error(err);
             });
+>>>>>>> main
     }
 }
 
@@ -163,6 +230,10 @@ let submitCreate = () => {
             formCreate.elements[i].style.borderColor = "rgb(220, 99, 0)";
         }
     }
+<<<<<<< HEAD
+    console.log(newVal);
+=======
+>>>>>>> main
     if (!valid) {
         alert(`Make sure your inputs match the required format: 
         \n- Name: String
@@ -176,6 +247,10 @@ let submitCreate = () => {
             "species": formCreate.elements[2].value,
             "enclosureId": formCreate.elements[3].value.toUpperCase()
         }
+<<<<<<< HEAD
+
+=======
+>>>>>>> main
         let str = `http://localhost:8080/animal/create`;
         axios.post(str, newVal)
             .then((response) => {

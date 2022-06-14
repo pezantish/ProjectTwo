@@ -9,6 +9,5 @@ public class AnimalNotFoundException extends NoSuchElementException{
 	
 	public AnimalNotFoundException(long id) {
 		super("Animal does not exist with ID: " + id);
-		
 	}
 }
